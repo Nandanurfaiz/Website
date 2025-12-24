@@ -1,0 +1,175 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Style */
+body {
+    background-image: url(bgmakanan.jpg);
+    background-size: cover;
+    margin: 20px;
+}
+
+.container {
+    width: 500px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    padding: 50px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, button, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+select {
+    width: 105%;
+}
+
+button {
+    width: 105%;
+    margin-top: 20px;
+    background-color: #2f8dcc;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+textarea {
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #236896;
+}
+
+p a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar h3 {
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+}
+
+.navbar {
+    margin-top: -40px;
+    margin-left: -20px;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 5px solid black;
+    display: flex;
+    justify-content: left;
+    line-height: 80px;
+    position: fixed;
+    z-index: 999;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    font-size: 23px;
+    color: white;
+    border: 2px solid black;
+    background-color: #007bff;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+.beranda {
+    margin: 0px 0px 0px 450px;
+}

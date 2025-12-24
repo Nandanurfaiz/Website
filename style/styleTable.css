@@ -1,0 +1,205 @@
+/* Umum */
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Form Pencarian dan Filter */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Tabel */
+table {
+    width: 90%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Kolom Aksi */
+.action {
+    margin-bottom: 20px;
+}
+
+table td a {
+    text-decoration: none;
+    color: #1d1e1f;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #1d1e1f;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 13px;
+}
+
+table td a:hover {
+    background-color: #ffd000;
+    color: black;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    pointer-events: none;
+}
+
+/* navbar */
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar h3 {
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 5px solid black;
+  display: flex;
+  justify-content: left;
+  line-height: 50px;
+  position: fixed;
+  z-index: 999;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  font-size: 23px;
+  color: white;
+  border: 2px solid black;
+  background-color: #b22c34;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+
+.beranda {
+  margin: 0px 0px 0px 400px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.tombol a {
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin: 60px auto;
+    transition: .2s;
+}
+
+.tombol a:hover {
+    height: 65px;
+    width: 205px;
+    line-height: 65px;
+    background-color: #F9F9F9;
+    color: #007bff;
+    border: 2px solid #007bff;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Menu</title>
+    <link rel="stylesheet" href="../css/styleFormAdmin.css">
+    <style>
+        .container {
+            margin-top: 150px;
+        }
+
+        .navbar {
+            margin-top: -150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h3 class="title">WARUNG SKIBIDI</h3>
+    
+        <ul class="navbar-kanan">
+            <li><a href="../../menuAdmin.html" class="beranda">Beranda</a></li>
+            <li><a href="form/admin/ManajemenMenu.html">Tambah Menu</a></li>
+            <li><a href="../../php/daftar_menu.php">Daftar Menu</a></li>
+            <li><a href="../../php/daftarTransaksi.php">Daftar Pesanan</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Manajemen Menu</h1>
+        <form action="../../php/proses_menu.php" method="post" enctype="multipart/form-data">
+
+            <!-- Nama Makanan -->
+            <label for="namaMakanan">Nama Makanan:</label>
+            <input type="text" name="nama" id="namaMakanan" required>
+
+            <!-- Harga -->
+            <label for="harga">Harga:</label>
+            <input type="number" name="harga" id="harga" required>
+
+            <!-- Stok -->
+            <label for="stok">Stok:</label>
+            <input type="number" name="stok" id="stok" required>
+
+            <!-- Kategori -->
+            <label for="kategori">Kategori:</label>
+            <select name="kategori" id="kategori" required>
+                <option value="Makanan">Makanan</option>
+                <option value="Minuman">Minuman</option>
+                <option value="Snack">Snack</option>
+            </select>
+
+            <!-- Deskripsi -->
+            <label for="deskripsi">Deskripsi:</label>
+            <textarea name="deskripsi" id="deskripsi" cols="50" rows="8"></textarea>
+
+            <!-- Upload Gambar -->
+            <label for="UploadGambar">Upload Gambar:</label>
+            <input type="file" name="gambar" id="UploadGambar" accept="image/*" required>
+
+            <button type="submit">Simpan</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

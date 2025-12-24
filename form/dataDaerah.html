@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Alamat Kebumen</title>
+    <script>
+        // Data lokasi untuk area Kebumen
+        const dataLokasi = {
+            "Kebumen": {
+                "Ambal": ["Ambalresmi", "Sidorejo", "Sumberjati"],
+                "Karanganyar": ["Candiwulan", "Karanganyar", "Plarangan"],
+                "Puring": ["Karangduwur", "Kalipoh", "Puring"]
+                // Tambahkan kecamatan dan desa lainnya di sini
+            }
+        };
+
+        // Fungsi untuk memperbarui pilihan kecamatan
+        function updateKecamatan() {
+            const kabupatenSelect = document.getElementById("kabupaten");
+            const kecamatanSelect = document.getElementById("kecamatan");
+            const desaSelect = document.getElementById("desa");
+
+            const kabupaten = kabupatenSelect.value;
+
+            // Kosongkan kecamatan dan desa
+            kecamatanSelect.innerHTML = "<option value=''>Pilih Kecamatan</option>";
+            desaSelect.innerHTML = "<option value=''>Pilih Desa</option>";
+
+            if (kabupaten && dataLokasi[kabupaten]) {
+                Object.keys(dataLokasi[kabupaten]).forEach(kecamatan => {
+                    const option = document.createElement("option");
+                    option.value = kecamatan;
+                    option.textContent = kecamatan;
+                    kecamatanSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Fungsi untuk memperbarui pilihan desa
+        function updateDesa() {
+            const kabupatenSelect = document.getElementById("kabupaten");
+            const kecamatanSelect = document.getElementById("kecamatan");
+            const desaSelect = document.getElementById("desa");
+
+            const kabupaten = kabupatenSelect.value;
+            const kecamatan = kecamatanSelect.value;
+
+            // Kosongkan desa
+            desaSelect.innerHTML = "<option value=''>Pilih Desa</option>";
+
+            if (kabupaten && kecamatan && dataLokasi[kabupaten][kecamatan]) {
+                dataLokasi[kabupaten][kecamatan].forEach(desa => {
+                    const option = document.createElement("option");
+                    option.value = desa;
+                    option.textContent = desa;
+                    desaSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Alamat - Kabupaten Kebumen</h1>
+    <form action="/submit" method="post">
+        <label for="kabupaten">Kabupaten:</label>
+        <select id="kabupaten" name="kabupaten" onchange="updateKecamatan()" required>
+            <option value="">Pilih Kabupaten</option>
+            <option value="Kebumen">Kebumen</option>
+        </select>
+        <br><br>
+
+        <label for="kecamatan">Kecamatan:</label>
+        <select id="kecamatan" name="kecamatan" onchange="updateDesa()" required>
+            <option value="">Pilih Kecamatan</option>
+        </select>
+        <br><br>
+
+        <label for="desa">Desa:</label>
+        <select id="desa" name="desa" required>
+            <option value="">Pilih Desa</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+</html>
